@@ -1,12 +1,28 @@
-# Hugo
-/public/
-/resources/_gen/
-.hugo_build.lock
+# 构建产物
+public/
 
-# OS / IDE
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+
+# 本地验证临时文件
+.cdp-profile-*/
+verify-out.json
+verify-err.txt
+chrome.log
+http.log
+_verify.js
+
+# 归档 / 临时
+.archive-*/
+*.tmp
+*.bak
+
+# 编辑器 / 系统
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
-*.log
-
-# 本地验证临时目录
-.chrome-v-*/

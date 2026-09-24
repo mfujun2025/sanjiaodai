@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+{{KEYWORDS_META}}
+<meta name="author" content="{{AUTHOR}}">
+<meta name="robots" content="{{ROBOTS}}">
+<link rel="canonical" href="{{CANONICAL}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{SITE_NAME}}">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+<meta property="og:url" content="{{CANONICAL}}">
+<meta property="og:locale" content="zh_CN">
+{{OG_IMAGE}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TITLE}}">
+<meta name="twitter:description" content="{{DESC}}">
+<meta name="theme-color" content="#0d4f8b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+{{JSONLD}}
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="{{SITE_NAME}} 首页">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span class="brand-text">
+        <strong>{{SITE_NAME}}</strong>
+        <small>{{DOMAIN_CN}}</small>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-btn" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <em>菜单</em>
+    </label>
+
+    <nav class="nav" aria-label="主导航">
+      {{NAV}}
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{CONTENT}}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">{{SITE_NAME}}</div>
+      <p class="footer-desc">{{SITE_DESC}}</p>
+      <p class="footer-domain">中文域名：{{DOMAIN_CN}}<br>Punycode：<code>{{DOMAIN}}</code></p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">快速入口</div>
+      <ul class="footer-links">
+        {{FOOTER_LINKS}}
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">关于本站</div>
+      <p class="footer-desc">{{ICP_NOTE}}</p>
+      <p class="footer-meta">本站内容经持续整理更新，如发现技术性错误欢迎指出。</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> {{SITE_NAME}} · {{DOMAIN_CN}}</span>
+    <a href="/sitemap/">网站地图</a>
+  </div>
+</footer>
+
+<script src="/assets/main.js" defer></script>
+</body>
+</html>

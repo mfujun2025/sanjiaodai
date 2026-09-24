@@ -1,0 +1,50 @@
+<nav class="crumb wrap" aria-label="面包屑">
+  <a href="/">首页</a>
+  <span class="sep">/</span>
+  {{CRUMB_MID}}
+  <span>{{CRUMB_TITLE}}</span>
+</nav>
+
+<div class="wrap article-layout">
+  <article>
+    <header class="article-head">
+      <h1>{{ARTICLE_TITLE}}</h1>
+      <div class="article-meta">
+        {{CAT_LINK}}
+        <span>发布于 {{DATE}}</span>
+        <span>作者：{{AUTHOR}}</span>
+        <span>{{READ_TIME}}</span>
+      </div>
+    </header>
+
+    <div class="article-body">
+      {{BODY}}
+    </div>
+
+    <div class="tag-row">
+      {{TAGS}}
+    </div>
+
+    {{RELATED}}
+  </article>
+
+  <aside class="side">
+    {{TOC_BOX}}
+    <div class="side-box">
+      <h3>同栏目文章</h3>
+      <div class="side-links">
+        {{SIDE_SIBLINGS}}
+      </div>
+    </div>
+    <div class="side-box">
+      <h3>常用速查</h3>
+      <div class="side-links">
+        <a href="/specs/#normal-v">普通V带截面尺寸</a>
+        <a href="/specs/#narrow-v">窄V带 SPZ/SPA/SPB/SPC</a>
+        <a href="/specs/#length-basis">长度基准 Li/Lw/Ld/La</a>
+        <a href="/specs/#min-pulley">小带轮最小直径</a>
+        <a href="/specs/#troubleshoot">失效现象速查</a>
+      </div>
+    </div>
+  </aside>
+</div>

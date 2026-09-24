@@ -1,0 +1,42 @@
+<nav class="crumb wrap" aria-label="面包屑">
+  <a href="/">首页</a>
+  <span class="sep">/</span>
+  <span>{{CRUMB_TITLE}}</span>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>{{PAGE_TITLE}}</h1>
+    <p>{{PAGE_DESC}}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    {{SPEC_BLOCKS}}
+    <div class="spec-block">
+      <h2>数据使用说明</h2>
+      <p class="spec-sub">关于本页数值的性质与适用范围</p>
+      <div class="article-body">
+        <p>本页汇总的各表数据为<strong>工程通行参考值</strong>，用于型号识别、初步选型和现场快速比对。表中数据的来源分为三类，使用时请注意区分：</p>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr><th>数据类别</th><th>性质</th><th>使用方式</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>截面尺寸（顶宽 / 节宽 / 高度）</td><td>标准标称值</td><td>可直接用于型号识别</td></tr>
+              <tr><td>长度范围、小带轮最小直径</td><td>经验区间</td><td>用于缩小候选范围，最终以厂家样本为准</td></tr>
+              <tr><td>耐温区间、工况系数</td><td>经验参考值</td><td>用于初步判断，须以供应商数据表复核</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>正式的设计计算，请依据<strong>现行的国家标准与行业标准</strong>（如普通 V 带、窄 V 带的相关国家标准），以及<strong>所采购厂家提供的技术样本与额定功率表</strong>。不同厂家的产品因配方与骨架配置不同，实际性能参数存在差异，不能直接套用其他厂家的数据。</p>
+        <blockquote>
+          <p>涉及安全相关的传动（起重、载人、防爆场所），须由具备资质的工程师完成设计核算并留档。本页内容不替代正式技术文件。</p>
+        </blockquote>
+        <p>如需完整的技术讲解，可参考：<a href="/category/basics/">三角带基础知识</a>、<a href="/category/models/">型号规格速查</a>、<a href="/category/guide/">选型与安装维护</a>、<a href="/category/faq/">常见问题</a>。</p>
+      </div>
+    </div>
+  </div>
+</section>

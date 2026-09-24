@@ -1,0 +1,24 @@
+<nav class="crumb wrap" aria-label="面包屑">
+  <a href="/">首页</a>
+  <span class="sep">/</span>
+  <span>网站地图</span>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>网站地图</h1>
+    <p>本站全部页面与文章一览，共 {{TOTAL_PAGES}} 个页面。按栏目分组，便于快速定位内容。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="map-group">
+      <h2>主要页面</h2>
+      <ul class="map-list">
+        {{MAIN_PAGES}}
+      </ul>
+    </div>
+    {{SITEMAP_CONTENT}}
+  </div>
+</section>

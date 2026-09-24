@@ -1,0 +1,27 @@
+<nav class="crumb wrap" aria-label="面包屑">
+  <a href="/">首页</a>
+  <span class="sep">/</span>
+  <span>站内搜索</span>
+</nav>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>站内搜索</h1>
+    <p>检索本站全部技术文章。支持多关键词（空格分隔，需同时命中），匹配范围包括标题、关键词、摘要与正文。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <form class="search-box" id="search-form" role="search">
+      <label for="q" class="skip-link">搜索关键词</label>
+      <input type="search" id="q" name="q" placeholder="例如：SPB 选型、张紧力、断带、耐油" autocomplete="off">
+      <button type="submit">搜索</button>
+    </form>
+    <p class="search-tips">试试这些关键词：<a href="/search/?q=%E9%80%89%E5%9E%8B">选型</a> · <a href="/search/?q=SPB">SPB</a> · <a href="/search/?q=%E5%BC%A0%E7%B4%A7">张紧</a> · <a href="/search/?q=%E6%96%AD%E5%B8%A6">断带</a> · <a href="/search/?q=%E8%80%90%E6%B2%B9">耐油</a> · <a href="/search/?q=%E9%95%BF%E5%BA%A6">长度</a></p>
+    <p class="search-result-count" id="search-count"></p>
+    <div id="search-results">
+      <p class="sr-empty">输入关键词开始检索。</p>
+    </div>
+  </div>
+</section>

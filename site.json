@@ -1,0 +1,32 @@
+{
+  "name": "三角带行业资讯",
+  "short_name": "三角带资讯",
+  "domain": "xn--ehqs60bj46a.com",
+  "domain_cn": "三角带.com",
+  "base_url": "https://xn--ehqs60bj46a.com",
+  "site_url_display": "三角带.com",
+  "slogan": "机械传动行业采购与技术人员的三角带（V带）知识库",
+  "description": "三角带（V带）行业资讯站，提供三角带结构材质讲解、A/B/C/SPZ/SPA/SPB/SPC 型号规格速查表、选型计算与安装维护指南、行业动态与常见问题解答，面向机械传动采购与技术人员。",
+  "keywords": "三角带,V带,三角带型号,三角带规格表,三角带选型,SPZ,SPA,SPB,SPC,窄V带,传动带,机械传动",
+  "author": "三角带行业资讯编辑部",
+  "icp_note": "本站为行业知识分享站点，内容仅供参考，实际选型请以主机厂技术文件和现行标准为准。",
+  "nav": [
+    { "text": "首页", "url": "/" },
+    { "text": "基础知识", "url": "/category/basics/" },
+    { "text": "型号规格", "url": "/category/models/" },
+    { "text": "选型维护", "url": "/category/guide/" },
+    { "text": "行业动态", "url": "/category/news/" },
+    { "text": "常见问题", "url": "/category/faq/" },
+    { "text": "速查表", "url": "/specs/" },
+    { "text": "搜索", "url": "/search/" }
+  ],
+  "footer_links": [
+    { "text": "三角带基础知识", "url": "/category/basics/" },
+    { "text": "型号规格速查", "url": "/category/models/" },
+    { "text": "选型与安装维护", "url": "/category/guide/" },
+    { "text": "行业动态", "url": "/category/news/" },
+    { "text": "常见问题", "url": "/category/faq/" },
+    { "text": "全站地图", "url": "/sitemap/" },
+    { "text": "关于本站", "url": "/about/" }
+  ]
+}
