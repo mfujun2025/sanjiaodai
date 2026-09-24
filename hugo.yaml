@@ -1,0 +1,69 @@
+baseURL: "https://xn--ehqs60bj46a.com/"
+locale: "zh-cn"
+title: "三角带.com"
+defaultContentLanguage: "zh"
+enableRobotsTXT: true
+hasCJKLanguage: true
+summaryLength: 70
+
+params:
+  siteName: "三角带.com"
+  siteDomain: "三角带.com"
+  description: "三角带（V带）型号规格、选型、安装与维护知识库，面向采购与维修的实用资料站。"
+  keywords: "三角带,三角带型号规格,V带,三角带选型,三角带安装,三角带故障排查"
+  author: "三角带.com 编辑部"
+  footerNote: "本站为行业知识整理，参数与尺寸请以厂家技术手册及国标 GB/T 11544、ISO 4184 为准。"
+
+taxonomies:
+  category: categories
+  tag: tags
+
+disableKinds:
+  - taxonomy
+  - term
+
+menu:
+  main:
+    - name: "首页"
+      pageRef: "/"
+      weight: 10
+    - name: "知识指南"
+      pageRef: "/guide"
+      weight: 20
+    - name: "产品中心"
+      pageRef: "/products"
+      weight: 30
+    - name: "型号对照表"
+      pageRef: "/models"
+      weight: 40
+    - name: "选型计算器"
+      pageRef: "/selector"
+      weight: 45
+    - name: "安装维护"
+      pageRef: "/install"
+      weight: 50
+    - name: "故障排查"
+      pageRef: "/faults"
+      weight: 60
+    - name: "关于本站"
+      pageRef: "/about"
+      weight: 70
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      autoHeadingID: true
+      attribute:
+        title: true
+        block: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
+
+outputs:
+  home:
+    - HTML
+    - RSS

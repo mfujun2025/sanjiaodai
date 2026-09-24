@@ -1,0 +1,12 @@
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+*.log
+
+# 本地验证临时目录
+.chrome-v-*/

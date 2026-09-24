@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <span class="brand-logo">⚙</span>
+      <span class="brand-text">三角带<span class="brand-dot">.com</span></span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      {{- range site.Menus.main }}
+      <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+    </nav>
+    <button class="nav-toggle" aria-label="菜单" onclick="document.querySelector('.site-nav').classList.toggle('open')">☰</button>
+  </div>
+</header>
