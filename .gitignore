@@ -15,6 +15,7 @@ verify-err.txt
 chrome.log
 http.log
 _verify.js
+_verify*
 
 # 归档 / 临时
 .archive-*/

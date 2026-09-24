@@ -46,7 +46,8 @@ DOMAIN = "xn--ehqs60bj46a.com"
 # 推送源码时排除的内容
 SRC_EXCLUDE_DIRS = {"public", ".git", "__pycache__", ".cdp-profile-1", ".archive-sanjiaodai-old"}
 SRC_EXCLUDE_EXT = {".pyc", ".pyo", ".log", ".tmp", ".bak"}
-SRC_EXCLUDE_FILES = {"verify-out.json", "verify-err.txt", "http.log", "chrome.log"}
+SRC_EXCLUDE_FILES = {"verify-out.json", "verify-err.txt", "http.log", "chrome.log",
+                     "package.json", "package-lock.json"}
 SRC_EXCLUDE_PREFIX = ("_",)
 
 
@@ -105,6 +106,8 @@ def collect_src():
         ]
         for fn in filenames:
             if fn in SRC_EXCLUDE_FILES:
+                continue
+            if fn.startswith(SRC_EXCLUDE_PREFIX):
                 continue
             if os.path.splitext(fn)[1] in SRC_EXCLUDE_EXT:
                 continue
