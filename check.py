@@ -46,18 +46,38 @@ def rel(p):
 
 # ------------------------------------------------------------ 1. 遍历 HTML
 
+# 站长验证文件（百度/必应等）是纯校验码文件，内容必须与平台给的完全一致，
+# 不能加 <title>/<meta>/canonical，因此排除在 SEO 检查之外，另做专项校验。
+VERIFY_PATTERNS = ("baidu_verify_", "google", "bing", "sogou_verify", "360_verify",
+                   "BingSiteAuth", "baidu_verify_code", "shenma-site-verification")
+
+
+def is_verify_file(name):
+    low = name.lower()
+    if name == "BingSiteAuth.xml":
+        return True
+    return any(p.lower() in low for p in VERIFY_PATTERNS)
+
+
 html_files = []
+verify_files = []
 for dirpath, _, filenames in os.walk(PUB):
     for fn in filenames:
-        if fn.endswith(".html"):
-            html_files.append(os.path.join(dirpath, fn))
+        if not fn.endswith(".html"):
+            continue
+        full = os.path.join(dirpath, fn)
+        if is_verify_file(fn):
+            verify_files.append(full)
+        else:
+            html_files.append(full)
 
 if not html_files:
     err("public/ 下没有任何 HTML 文件，构建可能失败")
     print("FAIL: 没有 HTML 文件")
     sys.exit(1)
 
-print(f"[1] HTML 文件数：{len(html_files)}")
+print(f"[1] HTML 文件数：{len(html_files)}" +
+      (f"（另有 {len(verify_files)} 个站长验证文件，不计入 SEO 检查）" if verify_files else ""))
 
 # ------------------------------------------------------------ 2. 占位符残留
 
@@ -207,6 +227,20 @@ if os.path.exists(cname_p):
         cval = fh.read().strip()
     if cval != DOMAIN:
         err(f"CNAME 内容为 {cval!r}，期望 {DOMAIN!r}")
+
+# ------------------------------------------------------------ 5b. 站长验证文件
+
+# 这些文件必须：① 存在于 public/ 根目录；② 内容非空；③ 没被 HTML 模板污染
+for full in verify_files:
+    name = rel(full)
+    with open(full, encoding="utf-8", errors="ignore") as fh:
+        vtxt = fh.read()
+    if not vtxt.strip():
+        err(f"站长验证文件为空：{name}")
+        continue
+    if "<html" in vtxt.lower() or "<!doctype" in vtxt.lower():
+        err(f"站长验证文件被模板污染（含 HTML 标签，会导致平台校验失败）：{name}")
+    print(f"[5b] 站长验证文件：{name}（{len(vtxt.strip())} 字符）")
 
 # ------------------------------------------------------------ 6. 分类页存在性
 
