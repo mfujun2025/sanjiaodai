@@ -1,6 +1,13 @@
 # 构建产物
 public/
 
+# 预览截图 / 调试产物（不属于源码，勿入库）
+preview/
+screenshots/
+/*.png
+/*.jpg
+/*.jpeg
+
 # Python
 __pycache__/
 *.py[cod]

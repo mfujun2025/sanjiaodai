@@ -44,11 +44,15 @@ PUB_BRANCH = "gh-pages"
 DOMAIN = "xn--ehqs60bj46a.com"
 
 # 推送源码时排除的内容
-SRC_EXCLUDE_DIRS = {"public", ".git", "__pycache__", ".cdp-profile-1", ".archive-sanjiaodai-old"}
-SRC_EXCLUDE_EXT = {".pyc", ".pyo", ".log", ".tmp", ".bak"}
+# 注意：走 Git Data API 推送时 .gitignore 完全不生效，排除规则必须写在这里。
+SRC_EXCLUDE_DIRS = {"public", ".git", "__pycache__", ".cdp-profile-1", ".archive-sanjiaodai-old",
+                    "preview", "screenshots", "node_modules", "dist", "build"}
+SRC_EXCLUDE_EXT = {".pyc", ".pyo", ".log", ".tmp", ".bak", ".zip", ".tar", ".gz", ".7z"}
 SRC_EXCLUDE_FILES = {"verify-out.json", "verify-err.txt", "http.log", "chrome.log",
                      "package.json", "package-lock.json"}
 SRC_EXCLUDE_PREFIX = ("_",)
+# 仅位于项目根目录的这些文件排除（不误伤 static/ 下的正常资源）
+SRC_ROOT_EXCLUDE_EXT = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
 
 
 # ---------------------------------------------------------------- 凭据
@@ -113,6 +117,9 @@ def collect_src():
                 continue
             full = os.path.join(dirpath, fn)
             rel = os.path.relpath(full, ROOT).replace("\\", "/")
+            # 项目根目录下的位图（截图/调试产物）不入库；static/ 内的正常资源不受影响
+            if "/" not in rel and os.path.splitext(fn)[1].lower() in SRC_ROOT_EXCLUDE_EXT:
+                continue
             # 隐藏文件：只放行 .gitignore / .nojekyll，其余跳过
             if os.path.basename(rel).startswith(".") and os.path.basename(rel) not in (".gitignore", ".nojekyll"):
                 continue
