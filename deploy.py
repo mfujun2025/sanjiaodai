@@ -269,21 +269,25 @@ def main():
     if not push(token, SRC_BRANCH, src_files, ROOT, "feat: 三角带行业资讯站（静态站源码 + 构建脚本）"):
         sys.exit(1)
 
-    if args.source_only or args.source:
-        print("\n完成（仅源码）。")
-        return
+    skip_pub = args.source_only or args.source
+    if skip_pub:
+        print("\n(跳过构建产物推送)")
+    else:
+        if not pub_files:
+            print("✗ public/ 为空，请先运行 python build.py")
+            sys.exit(1)
 
-    if not pub_files:
-        print("✗ public/ 为空，请先运行 python build.py")
-        sys.exit(1)
-
-    print(f"\n[2] 推送构建产物到 {PUB_BRANCH}（{len(pub_files)} 个文件）")
-    if not push(token, PUB_BRANCH, pub_files, PUB, "build: 发布站点构建产物"):
-        sys.exit(1)
+        print(f"\n[2] 推送构建产物到 {PUB_BRANCH}（{len(pub_files)} 个文件）")
+        if not push(token, PUB_BRANCH, pub_files, PUB, "build: 发布站点构建产物"):
+            sys.exit(1)
 
     if args.pages:
         print(f"\n[3] 配置 GitHub Pages")
         setup_pages(token)
+
+    if skip_pub and not args.pages:
+        print("\n完成（仅源码）。")
+        return
 
     print()
     print("=" * 62)
