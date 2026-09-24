@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /search/
 
 Sitemap: https://xn--ehqs60bj46a.com/sitemap.xml

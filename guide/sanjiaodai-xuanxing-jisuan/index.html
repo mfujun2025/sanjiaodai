@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>三角带选型计算实操：从功率到确定根数 | 三角带资讯</title>
+<meta name="description" content="把三角带选型拆成可执行的八步：确定计算功率与工况系数、选截面、验算带轮直径与带速、核算包角、查单根额定功率、定根数与中心距、给张紧量。附计算公式与常见取值区间。">
+<meta name="keywords" content="三角带选型,三角带计算,工况系数,带轮包角,带速计算,三角带根数">
+<meta name="author" content="三角带行业资讯编辑部">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://xn--ehqs60bj46a.com/guide/sanjiaodai-xuanxing-jisuan/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="三角带行业资讯">
+<meta property="og:title" content="三角带选型计算实操：从功率到确定根数 | 三角带资讯">
+<meta property="og:description" content="把三角带选型拆成可执行的八步：确定计算功率与工况系数、选截面、验算带轮直径与带速、核算包角、查单根额定功率、定根数与中心距、给张紧量。附计算公式与常见取值区间。">
+<meta property="og:url" content="https://xn--ehqs60bj46a.com/guide/sanjiaodai-xuanxing-jisuan/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xn--ehqs60bj46a.com/assets/og-cover.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="三角带选型计算实操：从功率到确定根数 | 三角带资讯">
+<meta name="twitter:description" content="把三角带选型拆成可执行的八步：确定计算功率与工况系数、选截面、验算带轮直径与带速、核算包角、查单根额定功率、定根数与中心距、给张紧量。附计算公式与常见取值区间。">
+<meta name="theme-color" content="#0d4f8b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"三角带选型计算实操：从功率到确定根数","description":"把三角带选型拆成可执行的八步：确定计算功率与工况系数、选截面、验算带轮直径与带速、核算包角、查单根额定功率、定根数与中心距、给张紧量。附计算公式与常见取值区间。","datePublished":"2026-09-14","dateModified":"2026-09-14","inLanguage":"zh-CN","author":{"@type":"Organization","name":"三角带行业资讯编辑部"},"publisher":{"@type":"Organization","name":"三角带行业资讯"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://xn--ehqs60bj46a.com/guide/sanjiaodai-xuanxing-jisuan/"},"articleSection":"选型与安装维护","keywords":"三角带选型,三角带计算,工况系数,带轮包角,带速计算,三角带根数"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://xn--ehqs60bj46a.com/"},{"@type":"ListItem","position":2,"name":"选型与安装维护","item":"https://xn--ehqs60bj46a.com/category/guide/"},{"@type":"ListItem","position":3,"name":"三角带选型计算实操：从功率到确定根数"}]}</script></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="三角带行业资讯 首页">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span class="brand-text">
+        <strong>三角带行业资讯</strong>
+        <small>三角带.com</small>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-btn" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <em>菜单</em>
+    </label>
+
+    <nav class="nav" aria-label="主导航">
+      <a href="/" class="">首页</a>
+      <a href="/category/basics/" class="">基础知识</a>
+      <a href="/category/models/" class="">型号规格</a>
+      <a href="/category/guide/" class="is-active">选型维护</a>
+      <a href="/category/news/" class="">行业动态</a>
+      <a href="/category/faq/" class="">常见问题</a>
+      <a href="/specs/" class="">速查表</a>
+      <a href="/search/" class="">搜索</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<nav class="crumb wrap" aria-label="面包屑">
+  <a href="/">首页</a>
+  <span class="sep">/</span>
+  <a href="/category/guide/">选型与安装维护</a><span class="sep">/</span>
+  <span>三角带选型计算实操：从功率到确定根数</span>
+</nav>
+
+<div class="wrap article-layout">
+  <article>
+    <header class="article-head">
+      <h1>三角带选型计算实操：从功率到确定根数</h1>
+      <div class="article-meta">
+        <a class="am-cat" href="/category/guide/">选型与安装维护</a>
+        <span>发布于 2026-09-14</span>
+        <span>作者：三角带行业资讯编辑部</span>
+        <span>约 10 分钟阅读</span>
+      </div>
+    </header>
+
+    <div class="article-body">
+      <h2 id="一-选型要回答的四个问题">一、选型要回答的四个问题</h2>
+<p>任何一次三角带选型，本质就是回答：</p>
+<ol>
+<li>用哪个<strong>截面</strong>？（A / B / SPB ...）</li>
+<li>需要<strong>几根</strong>？</li>
+<li>用多<strong>长</strong>？（节线长度）</li>
+<li><strong>张紧</strong>怎么留量？</li>
+</ol>
+<p>下面逐步拆解。需要说明的是，工程计算最终要与<strong>采购厂家的额定功率表</strong>配合，本文给出的是计算框架和各环节的取值逻辑，具体数值以厂家样本和现行标准为准。</p>
+<h2 id="二-第一步-计算功率">二、第一步：计算功率</h2>
+<p>电机的额定功率不能直接拿来选带，要先乘以<strong>工况系数 Ka</strong>：</p>
+<pre><code>Pc = P × Ka
+</code></pre>
+<p>其中 <code>P</code> 是传递功率（kW），一般取电机额定功率；<code>Ka</code> 是工况系数，反映载荷平稳性、每日工作时间和启动冲击。</p>
+<div class="table-scroll"><table class="data-table">
+<thead>
+<tr>
+<th>载荷性质</th>
+<th>典型设备</th>
+<th>每日工作时间</th>
+<th>Ka 参考区间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平稳</td>
+<td>离心泵、风机、均匀送料输送机</td>
+<td>&lt;10h</td>
+<td>1.0 ~ 1.2</td>
+</tr>
+<tr>
+<td>平稳</td>
+<td>同上</td>
+<td>10~16h</td>
+<td>1.1 ~ 1.3</td>
+</tr>
+<tr>
+<td>中等冲击</td>
+<td>机床、搅拌机、往复输送机</td>
+<td>&lt;10h</td>
+<td>1.2 ~ 1.4</td>
+</tr>
+<tr>
+<td>中等冲击</td>
+<td>同上</td>
+<td>10~16h</td>
+<td>1.4 ~ 1.6</td>
+</tr>
+<tr>
+<td>较大冲击</td>
+<td>破碎机、压缩机、冲床</td>
+<td>&lt;10h</td>
+<td>1.5 ~ 1.8</td>
+</tr>
+<tr>
+<td>较大冲击</td>
+<td>同上</td>
+<td>&gt;16h</td>
+<td>1.7 ~ 2.0</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>上表为<strong>工程参考区间</strong>，不同来源的系数表略有差异。正式设计应以所选带型的标准或厂家手册中的系数表为准。启动方式为<strong>变频软启动</strong>时可适当下调，<strong>直接启动的重载设备</strong>要取上限。</p>
+</blockquote>
+<p><strong>关键点：工况系数不是可省略的环节。</strong> 现场"选了标准型号却频繁断带"，很多就是没做这一步，直接用电机功率选了带。</p>
+<h2 id="三-第二步-选截面">三、第二步：选截面</h2>
+<p>用<strong>计算功率 Pc</strong> 和<strong>小带轮转速 n1</strong> 查选型图（各厂家样本中都有，横轴小带轮转速、纵轴计算功率，各截面覆盖一个区域，两区交界处两个截面都可选）。</p>
+<p>选截面的经验倾向：</p>
+<ul>
+<li>交界的两个截面都能满足时，<strong>大一号截面根数少、受力大、对带轮要求高；小一号根数多、更柔和</strong>。多根小截面在减振和容错上更好，但对带轮槽宽要求高。</li>
+<li><strong>转速高、空间紧</strong> → 倾向窄 V 带（SPZ/SPA）</li>
+<li><strong>重载、低转速</strong> → 倾向大截面（C/D/SPC）</li>
+<li>避免选出<strong>根数超过 8 根</strong>的方案，根数太多载荷分配不均问题突出，应换大截面</li>
+</ul>
+<h2 id="四-第三步-验算带轮直径与带速">四、第三步：验算带轮直径与带速</h2>
+<h3 id="带轮直径">带轮直径</h3>
+<p>小带轮节圆直径 <code>dd1</code> 必须不小于该截面允许的最小值（否则弯曲过度，带体迅速疲劳）：</p>
+<div class="table-scroll"><table class="data-table">
+<thead>
+<tr>
+<th>截面</th>
+<th>小带轮最小节圆直径（经验下限）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Y</td>
+<td>20 ~ 25 mm</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>50 ~ 63 mm</td>
+</tr>
+<tr>
+<td>A</td>
+<td>75 ~ 90 mm</td>
+</tr>
+<tr>
+<td>B</td>
+<td>125 ~ 140 mm</td>
+</tr>
+<tr>
+<td>C</td>
+<td>200 ~ 224 mm</td>
+</tr>
+<tr>
+<td>D</td>
+<td>355 ~ 400 mm</td>
+</tr>
+<tr>
+<td>SPZ</td>
+<td>63 ~ 71 mm</td>
+</tr>
+<tr>
+<td>SPA</td>
+<td>90 ~ 100 mm</td>
+</tr>
+<tr>
+<td>SPB</td>
+<td>140 ~ 160 mm</td>
+</tr>
+<tr>
+<td>SPC</td>
+<td>224 ~ 250 mm</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>数值随带的结构（包布/切边）、骨架材料不同而变，<strong>以厂家样本给出的最小带轮直径为最终依据</strong>。</p>
+</blockquote>
+<h3 id="带速">带速</h3>
+<pre><code>v = π × dd1 × n1 / 60000    (m/s)
+</code></pre>
+<p>其中 <code>dd1</code> 单位 mm，<code>n1</code> 单位 r/min。常规控制范围：</p>
+<ul>
+<li><strong>下限</strong>：一般不低于 5 m/s，过低会导致带的单位时间循环次数少、张紧力要求高</li>
+<li><strong>上限</strong>：一般不超过 25 m/s，过高会显著加剧带体离心应力和发热；窄 V 带、切边带的上限略高</li>
+<li><strong>最佳区间</strong>：15 ~ 20 m/s 附近效率较好</li>
+</ul>
+<p><strong>带速超限的处理</strong>：改变小带轮直径，或调整传动比重新分配。</p>
+<h2 id="五-第四步-核算包角">五、第四步：核算包角</h2>
+<p>小带轮包角（开口传动）：</p>
+<pre><code>α1 = 180° − (dd2 − dd1) / a × 57.3°
+</code></pre>
+<p>其中 <code>a</code> 是中心距（mm），<code>dd1</code>、<code>dd2</code> 是小、大带轮节圆直径。</p>
+<ul>
+<li><strong>经验下限：α1 ≥ 120°</strong></li>
+<li>若不足 120°，依次考虑：加大中心距 → 减小传动比 → <strong>增加张紧轮</strong>（注意张紧轮应布置在松边内侧，且会反向减小包角，需重新核算）</li>
+<li>实际使用的包角需乘包角修正系数（查表，包角越小系数越小）</li>
+</ul>
+<h2 id="六-第五步-查单根额定功率与定根数">六、第五步：查单根额定功率与定根数</h2>
+<p>各厂家的样本中，每种截面会给出一张<strong>额定功率表</strong>，按小带轮直径和转速查得单根基本额定功率 <code>P1</code>（kW），再乘以两个修正系数：</p>
+<pre><code>根数 z = Pc / (P1 × Kα × KL)
+</code></pre>
+<ul>
+<li><code>Kα</code>：包角修正系数（由包角查表）</li>
+<li><code>KL</code>：带长修正系数（由节线长度查表，短带循环次数多，系数略低）</li>
+</ul>
+<p>结果<strong>向上取整</strong>，且建议：</p>
+<ul>
+<li>一般不少于 2 根（单根运行一旦失效立即停机，但单根方案的可靠性争议较大，实际取 2 根以上更稳妥）</li>
+<li>不超过 8 根（超过则换大截面）</li>
+<li><strong>根数必须按"配组"供货</strong>，同组内长度公差受控</li>
+</ul>
+<h2 id="七-第六步-中心距与带长">七、第六步：中心距与带长</h2>
+<h3 id="初定中心距">初定中心距</h3>
+<p>经验范围：</p>
+<pre><code>0.7 × (dd1 + dd2) ≤ a0 ≤ 2 × (dd1 + dd2)
+</code></pre>
+<p>倾向于取<strong>偏大</strong>的中心距：包角更大、单位时间弯曲次数更少、寿命更长。但中心距过大不仅占空间，还容易引起带的振动抖动。</p>
+<h3 id="求所需带长-近似">求所需带长（近似）</h3>
+<pre><code>L0 ≈ 2 × a0 + π/2 × (dd1 + dd2) + (dd2 − dd1)² / (4 × a0)
+</code></pre>
+<p>算出 L0 后，<strong>取最接近的标准节线长度 Lp</strong>，再反算实际中心距：</p>
+<pre><code>a ≈ a0 + (Lp − L0) / 2
+</code></pre>
+<p>注意这里的 <code>Lp</code> 必须是<strong>节线长度</strong>，与上一节型号命名里的长度基准对应。</p>
+<h3 id="留出张紧调节量">留出张紧调节量</h3>
+<p>实际中心距的调节范围建议：</p>
+<ul>
+<li><strong>张紧方向（缩短）</strong>：约 <code>0.03 × Lp</code></li>
+<li><strong>放松方向（伸长）</strong>：约 <code>0.015 × Lp</code></li>
+</ul>
+<p>即电机滑轨的可调距离至少要覆盖这两个量之和，否则带子运转一段时间伸长后无法复紧，只能提前报废。</p>
+<h2 id="八-第七步-张紧力怎么定">八、第七步：张紧力怎么定</h2>
+<p>张紧力过大过小都出问题：过小打滑、过热、磨损快；过大则轴承和轴承受额外载荷，带体疲劳加剧。</p>
+<p><strong>现场可用的简化判断法（挠度法）</strong>：</p>
+<p>在两带轮之间跨度中央，垂直于带施加一个规定的力，测量带的挠度。经验判据：</p>
+<pre><code>每 100mm 跨度，挠度约 1.5 ~ 2mm 为合适
+</code></pre>
+<p>即跨度 500mm 时，中央下压约 7.5~10mm 为宜。施加的力按截面和根数查厂家手册。</p>
+<p><strong>更规范的方法</strong>是用<strong>带张力计</strong>测固有频率反算张紧力，适合批量设备和关键设备。</p>
+<blockquote>
+<p>新带装好后运行 24~48 小时会明显伸长，<strong>必须复紧一次</strong>。这是新带寿命的关键动作，漏做会导致早期打滑烧带。</p>
+</blockquote>
+<h2 id="九-完整计算示例-框架演示">九、完整计算示例（框架演示）</h2>
+<p><strong>已知</strong>：离心风机，电机 15 kW，4 极电机 1450 r/min，从动端要求 580 r/min，每日运行 12 小时，中心距约 800mm。</p>
+<p><strong>第 1 步 计算功率</strong>
+平稳载荷、10~16h，取 Ka = 1.2 → <code>Pc = 15 × 1.2 = 18 kW</code></p>
+<p><strong>第 2 步 传动比</strong>
+<code>i = 1450 / 580 = 2.5</code></p>
+<p><strong>第 3 步 选截面</strong>
+查选型图（1450 r/min，18 kW 落在 B 与 SPB/SPA 的交界区）。此处演示取 <strong>SPB</strong>。</p>
+<p><strong>第 4 步 定小带轮直径</strong>
+SPB 最小约 140mm，取标准值 <code>dd1 = 160 mm</code>
+验证带速：<code>v = π × 160 × 1450 / 60000 ≈ 12.1 m/s</code> ✓（在 5~25 区间内）</p>
+<p><strong>第 5 步 大带轮直径</strong>
+<code>dd2 = dd1 × i = 160 × 2.5 = 400 mm</code> ✓（取标准值 400mm）</p>
+<p><strong>第 6 步 验算包角</strong>
+<code>α1 = 180 − (400−160)/800 × 57.3 = 180 − 17.2 = 162.8°</code> ✓（≥120°）</p>
+<p><strong>第 7 步 求带长</strong>
+<code>L0 ≈ 2×800 + 1.5708×(160+400) + (240)²/(4×800)</code>
+<code>= 1600 + 879.6 + 18.0 ≈ 2497.6 mm</code>
+取标准节线长度 <code>Lp = 2500 mm</code>（SPB2500Lw）
+实际中心距 <code>a ≈ 800 + (2500−2497.6)/2 ≈ 801.2 mm</code></p>
+<p><strong>第 8 步 定根数</strong>
+由厂家 SPB 额定功率表查得（160mm、1450 r/min）单根基本额定功率。
+假设查得 <code>P1 ≈ 5.3 kW</code>，包角修正系数 <code>Kα ≈ 0.97</code>，带长修正系数 <code>KL ≈ 1.00</code>：</p>
+<pre><code>z = 18 / (5.3 × 0.97 × 1.00) ≈ 3.50 → 取 4 根
+</code></pre>
+<p><strong>第 9 步 张紧调节量</strong>
+缩短方向 <code>0.03 × 2500 = 75 mm</code>，伸长方向 <code>0.015 × 2500 = 37.5 mm</code>
+滑轨可调距离至少 112.5mm，取 120mm。</p>
+<p><strong>最终要求</strong>：<code>SPB2500Lw，4 根配组，中心距 801mm，滑轨可调 ≥120mm</code></p>
+<blockquote>
+<p><strong>注意</strong>：第 8 步的单根额定功率必须查实际采购厂家的样本。上面的 5.3 kW 是为了演示计算流程而假设的数值，<strong>不可直接用于实际设计</strong>。</p>
+</blockquote>
+<h2 id="十-常见错误清单">十、常见错误清单</h2>
+<div class="table-scroll"><table class="data-table">
+<thead>
+<tr>
+<th>错误</th>
+<th>后果</th>
+<th>正确做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不做工况系数，直接用电机功率</td>
+<td>带选小，频繁断带</td>
+<td>先算 Pc = P × Ka</td>
+</tr>
+<tr>
+<td>用外周长当带长</td>
+<td>长度不对，装不上或打滑</td>
+<td>用<strong>节线长度 Lp</strong></td>
+</tr>
+<tr>
+<td>忽略包角</td>
+<td>传动能力不足、打滑</td>
+<td>α1 核算，不足 120° 要调整</td>
+</tr>
+<tr>
+<td>无张紧调节余量</td>
+<td>带伸长后无法复紧，提前报废</td>
+<td>滑轨留 0.03Lp + 0.015Lp 余量</td>
+</tr>
+<tr>
+<td>新带不复查张紧</td>
+<td>早期打滑、烧带</td>
+<td>运行 24~48h 后复紧</td>
+</tr>
+<tr>
+<td>不同批次带混组</td>
+<td>载荷分配不均、接连断带</td>
+<td>配组供货，核对组号</td>
+</tr>
+<tr>
+<td>只换带不查带轮</td>
+<td>槽磨损导致新带快速失效</td>
+<td>检查带轮槽宽与槽底间隙</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="十一-需要留意的边界">十一、需要留意的边界</h2>
+<ul>
+<li>本文所有<strong>系数区间和直径下限都是工程参考值</strong>，用于建立计算框架和自查</li>
+<li><strong>正式设计必须依据现行国家标准或行业标准</strong>，以及你所采购厂家的额定功率表</li>
+<li>涉及安全相关的传动（起重、载人、防爆场所），须由具备资质的工程师完成设计并留档</li>
+</ul>
+    </div>
+
+    <div class="tag-row">
+      <a class="tag" href="/search/?q=%E4%B8%89%E8%A7%92%E5%B8%A6%E9%80%89%E5%9E%8B">三角带选型</a>
+      <a class="tag" href="/search/?q=%E4%B8%89%E8%A7%92%E5%B8%A6%E8%AE%A1%E7%AE%97">三角带计算</a>
+      <a class="tag" href="/search/?q=%E5%B7%A5%E5%86%B5%E7%B3%BB%E6%95%B0">工况系数</a>
+      <a class="tag" href="/search/?q=%E5%B8%A6%E8%BD%AE%E5%8C%85%E8%A7%92">带轮包角</a>
+      <a class="tag" href="/search/?q=%E5%B8%A6%E9%80%9F%E8%AE%A1%E7%AE%97">带速计算</a>
+      <a class="tag" href="/search/?q=%E4%B8%89%E8%A7%92%E5%B8%A6%E6%A0%B9%E6%95%B0">三角带根数</a>
+    </div>
+
+    <section class="related">
+<h2>相关阅读</h2>
+<div class="card-grid">
+<article class="card">
+  <div class="card-top">
+    <a class="card-cat" href="/category/guide/">选型与安装维护</a>
+    <span class="card-date">2026-09-08</span>
+  </div>
+  <h3><a href="/guide/sanjiaodai-anzhuang-zhangjin/">三角带安装与张紧：对中、初张力与复紧</a></h3>
+  <p>三角带寿命的一半取决于安装。本文讲清带轮对中的检测方法、撬带装带的禁止事项、初张紧力如何判断、新带 24~48 小时复紧的必要性，以及多根带配组的检查要点。</p>
+  <div class="card-foot">
+    <span class="card-kw">三角带安装</span>
+    <a class="card-more" href="/guide/sanjiaodai-anzhuang-zhangjin/">阅读全文 →</a>
+  </div>
+</article>
+<article class="card">
+  <div class="card-top">
+    <a class="card-cat" href="/category/guide/">选型与安装维护</a>
+    <span class="card-date">2026-09-06</span>
+  </div>
+  <h3><a href="/guide/sanjiaodai-shibai-fenxi/">三角带失效形式与原因排查</a></h3>
+  <p>按失效外观倒查原因：正向断裂、侧面撕裂、齿根开裂、翻带、胶层掉块的典型成因与排查顺序，附一份现场排查决策表与预防措施清单。</p>
+  <div class="card-foot">
+    <span class="card-kw">三角带断裂原因</span>
+    <a class="card-more" href="/guide/sanjiaodai-shibai-fenxi/">阅读全文 →</a>
+  </div>
+</article>
+<article class="card">
+  <div class="card-top">
+    <a class="card-cat" href="/category/news/">行业动态</a>
+    <span class="card-date">2026-09-20</span>
+  </div>
+  <h3><a href="/news/chuandongdai-hangye-qushi/">传动带行业趋势：材料、节能与合规</a></h3>
+  <p>从公开资料与行业信息看传动带领域近年的几个方向：高性能骨架材料普及、传动系统节能化、生产端智能化与质量可追溯、绿色低碳与出口合规要求。面向采购与技术选型人员。</p>
+  <div class="card-foot">
+    <span class="card-kw">传动带行业趋势</span>
+    <a class="card-more" href="/news/chuandongdai-hangye-qushi/">阅读全文 →</a>
+  </div>
+</article>
+</div>
+</section>
+  </article>
+
+  <aside class="side">
+    <div class="side-box"><h3>本文目录</h3><nav class="toc"><a class="" href="#一-选型要回答的四个问题">一、选型要回答的四个问题</a>
+<a class="" href="#二-第一步-计算功率">二、第一步：计算功率</a>
+<a class="" href="#三-第二步-选截面">三、第二步：选截面</a>
+<a class="" href="#四-第三步-验算带轮直径与带速">四、第三步：验算带轮直径与带速</a>
+<a class="lv3" href="#带轮直径">带轮直径</a>
+<a class="lv3" href="#带速">带速</a>
+<a class="" href="#五-第四步-核算包角">五、第四步：核算包角</a>
+<a class="" href="#六-第五步-查单根额定功率与定根数">六、第五步：查单根额定功率与定根数</a>
+<a class="" href="#七-第六步-中心距与带长">七、第六步：中心距与带长</a>
+<a class="lv3" href="#初定中心距">初定中心距</a>
+<a class="lv3" href="#求所需带长-近似">求所需带长（近似）</a>
+<a class="lv3" href="#留出张紧调节量">留出张紧调节量</a>
+<a class="" href="#八-第七步-张紧力怎么定">八、第七步：张紧力怎么定</a>
+<a class="" href="#九-完整计算示例-框架演示">九、完整计算示例（框架演示）</a>
+<a class="" href="#十-常见错误清单">十、常见错误清单</a>
+<a class="" href="#十一-需要留意的边界">十一、需要留意的边界</a></nav></div>
+    <div class="side-box">
+      <h3>同栏目文章</h3>
+      <div class="side-links">
+        <div class="side-box"><h3>同栏目文章</h3><div class="side-links"><a href="/guide/sanjiaodai-anzhuang-zhangjin/">三角带安装与张紧：对中、初张力与复紧</a>
+        <a href="/guide/sanjiaodai-shibai-fenxi/">三角带失效形式与原因排查</a></div></div>
+      </div>
+    </div>
+    <div class="side-box">
+      <h3>常用速查</h3>
+      <div class="side-links">
+        <a href="/specs/#normal-v">普通V带截面尺寸</a>
+        <a href="/specs/#narrow-v">窄V带 SPZ/SPA/SPB/SPC</a>
+        <a href="/specs/#length-basis">长度基准 Li/Lw/Ld/La</a>
+        <a href="/specs/#min-pulley">小带轮最小直径</a>
+        <a href="/specs/#troubleshoot">失效现象速查</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">三角带行业资讯</div>
+      <p class="footer-desc">三角带（V带）行业资讯站，提供三角带结构材质讲解、A/B/C/SPZ/SPA/SPB/SPC 型号规格速查表、选型计算与安装维护指南、行业动态与常见问题解答，面向机械传动采购与技术人员。</p>
+      <p class="footer-domain">中文域名：三角带.com<br>Punycode：<code>xn--ehqs60bj46a.com</code></p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">快速入口</div>
+      <ul class="footer-links">
+        <li><a href="/category/basics/">三角带基础知识</a></li>
+        <li><a href="/category/models/">型号规格速查</a></li>
+        <li><a href="/category/guide/">选型与安装维护</a></li>
+        <li><a href="/category/news/">行业动态</a></li>
+        <li><a href="/category/faq/">常见问题</a></li>
+        <li><a href="/sitemap/">全站地图</a></li>
+        <li><a href="/about/">关于本站</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">关于本站</div>
+      <p class="footer-desc">本站为行业知识分享站点，内容仅供参考，实际选型请以主机厂技术文件和现行标准为准。</p>
+      <p class="footer-meta">本站内容经持续整理更新，如发现技术性错误欢迎指出。</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> 三角带行业资讯 · 三角带.com</span>
+    <a href="/sitemap/">网站地图</a>
+  </div>
+</footer>
+
+<script src="/assets/main.js" defer></script>
+</body>
+</html>
