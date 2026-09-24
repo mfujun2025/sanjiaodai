@@ -714,8 +714,6 @@ def build_sitemap_page():
         active="/sitemap/",
         keywords="网站地图,三角带文章列表",
     )
-    write(os.path.join(PUB, "sitemap.html.tmp_ignore"), "")  # 占位，稍后删除
-    os.remove(os.path.join(PUB, "sitemap.html.tmp_ignore"))
     write(os.path.join(PUB, "sitemap", "index.html"), out)
     return total_pages
 
