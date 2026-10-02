@@ -278,7 +278,13 @@ def page(title, desc, path, content, active="", keywords="", jsonld="", robots="
         "NAV": nav_html(active),
         "FOOTER_LINKS": footer_links_html(),
         "JSONLD": f'<script type="application/ld+json">{jsonld}</script>' if jsonld else "",
-        "OG_IMAGE": f'<meta property="og:image" content="{BASE}/assets/og-cover.svg">',
+        "OG_IMAGE": (
+            f'<meta property="og:image" content="{BASE}/assets/og-cover.png">\n'
+            f'<meta property="og:image:width" content="1200">\n'
+            f'<meta property="og:image:height" content="630">\n'
+            f'<meta property="og:image:type" content="image/png">\n'
+            f'<meta name="twitter:image" content="{BASE}/assets/og-cover.png">'
+        ),
         "CONTENT": content,
     })
 

@@ -8,6 +8,9 @@ screenshots/
 /*.jpg
 /*.jpeg
 
+# SEO 体检工作数据（抓取的线上页面，可随时重新生成，不入库）
+audit/
+
 # Python
 __pycache__/
 *.py[cod]

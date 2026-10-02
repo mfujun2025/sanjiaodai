@@ -46,7 +46,8 @@ DOMAIN = "xn--ehqs60bj46a.com"
 # 推送源码时排除的内容
 # 注意：走 Git Data API 推送时 .gitignore 完全不生效，排除规则必须写在这里。
 SRC_EXCLUDE_DIRS = {"public", ".git", "__pycache__", ".cdp-profile-1", ".archive-sanjiaodai-old",
-                    "preview", "screenshots", "node_modules", "dist", "build"}
+                    "preview", "screenshots", "node_modules", "dist", "build",
+                    "audit"}   # audit/ 是 SEO 体检的本地工作数据（抓取的线上页面），不入库
 SRC_EXCLUDE_EXT = {".pyc", ".pyo", ".log", ".tmp", ".bak", ".zip", ".tar", ".gz", ".7z"}
 SRC_EXCLUDE_FILES = {"verify-out.json", "verify-err.txt", "http.log", "chrome.log",
                      "package.json", "package-lock.json"}
