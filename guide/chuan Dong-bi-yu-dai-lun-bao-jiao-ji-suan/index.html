@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>三角带传动比与带轮包角计算：中心距、功率与根数确定方法 | 三角带资讯</title>
+<meta name="description" content="三角带传动设计中，传动比、带轮包角、中心距、传递功率与带根数是核心参数。本文系统讲解计算公式、查表方法与实际工程应用，帮助你完成完整的三角带传动设计。">
+<meta name="keywords" content="传动比计算,带轮包角,三角带中心距,三角带功率,三角带根数,V带传动设计,窄V带选型,SPZ SPA SPB SPC">
+<meta name="author" content="三角带行业资讯编辑部">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://xn--ehqs60bj46a.com/guide/chuan Dong-bi-yu-dai-lun-bao-jiao-ji-suan/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="三角带行业资讯">
+<meta property="og:title" content="三角带传动比与带轮包角计算：中心距、功率与根数确定方法 | 三角带资讯">
+<meta property="og:description" content="三角带传动设计中，传动比、带轮包角、中心距、传递功率与带根数是核心参数。本文系统讲解计算公式、查表方法与实际工程应用，帮助你完成完整的三角带传动设计。">
+<meta property="og:url" content="https://xn--ehqs60bj46a.com/guide/chuan Dong-bi-yu-dai-lun-bao-jiao-ji-suan/">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xn--ehqs60bj46a.com/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:image" content="https://xn--ehqs60bj46a.com/assets/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="三角带传动比与带轮包角计算：中心距、功率与根数确定方法 | 三角带资讯">
+<meta name="twitter:description" content="三角带传动设计中，传动比、带轮包角、中心距、传递功率与带根数是核心参数。本文系统讲解计算公式、查表方法与实际工程应用，帮助你完成完整的三角带传动设计。">
+<meta name="theme-color" content="#0d4f8b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script type="application/ld+json"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"三角带传动比与带轮包角计算：中心距、功率与根数确定方法","description":"三角带传动设计中，传动比、带轮包角、中心距、传递功率与带根数是核心参数。本文系统讲解计算公式、查表方法与实际工程应用，帮助你完成完整的三角带传动设计。","datePublished":"2026-10-13","dateModified":"2026-10-13","inLanguage":"zh-CN","author":{"@type":"Organization","name":"三角带行业资讯编辑部"},"publisher":{"@type":"Organization","name":"三角带行业资讯"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://xn--ehqs60bj46a.com/guide/chuan Dong-bi-yu-dai-lun-bao-jiao-ji-suan/"},"articleSection":"选型与安装维护","keywords":"传动比计算,带轮包角,三角带中心距,三角带功率,三角带根数,V带传动设计,窄V带选型,SPZ SPA SPB SPC"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://xn--ehqs60bj46a.com/"},{"@type":"ListItem","position":2,"name":"选型与安装维护","item":"https://xn--ehqs60bj46a.com/category/guide/"},{"@type":"ListItem","position":3,"name":"三角带传动比与带轮包角计算：中心距、功率与根数确定方法"}]}</script></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="三角带行业资讯 首页">
+      <span class="brand-mark" aria-hidden="true">V</span>
+      <span class="brand-text">
+        <strong>三角带行业资讯</strong>
+        <small>三角带.com</small>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-btn" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <em>菜单</em>
+    </label>
+
+    <nav class="nav" aria-label="主导航">
+      <a href="/" class="">首页</a>
+      <a href="/category/basics/" class="">基础知识</a>
+      <a href="/category/models/" class="">型号规格</a>
+      <a href="/category/guide/" class="is-active">选型维护</a>
+      <a href="/category/news/" class="">行业动态</a>
+      <a href="/category/faq/" class="">常见问题</a>
+      <a href="/specs/" class="">速查表</a>
+      <a href="/search/" class="">搜索</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<nav class="crumb wrap" aria-label="面包屑">
+  <a href="/">首页</a>
+  <span class="sep">/</span>
+  <a href="/category/guide/">选型与安装维护</a><span class="sep">/</span>
+  <span>三角带传动比与带轮包角计算：中心距、功率与根数确定方法</span>
+</nav>
+
+<div class="wrap article-layout">
+  <article>
+    <header class="article-head">
+      <h1>三角带传动比与带轮包角计算：中心距、功率与根数确定方法</h1>
+      <div class="article-meta">
+        <a class="am-cat" href="/category/guide/">选型与安装维护</a>
+        <span>发布于 2026-10-13</span>
+        <span>作者：三角带行业资讯编辑部</span>
+        <span>约 8 分钟阅读</span>
+      </div>
+    </header>
+
+    <div class="article-body">
+      <p>工厂里新上一台设备，电机选好了、负载算清楚了，最后到三角带传动这一步却卡住了——传动比怎么定？包角够不够？需要几根带子？这些问题看起来简单，但参数之间相互耦合，算错了轻则打滑丢效率，重则带子寿命只有几个月。</p>
+<p>传动设计的核心就四件事：<strong>传动比、包角、中心距、功率与根数</strong>。下面按设计流程逐一讲清楚。</p>
+<h2 id="一-传动比-决定主动轮与从动轮的直径关系">一、传动比：决定主动轮与从动轮的直径关系</h2>
+<h3 id="1-1-什么是传动比">1.1 什么是传动比</h3>
+<p>传动比 $i$ 是主动轮转速 $n_1$ 与从动轮转速 $n_2$ 的比值：</p>
+<p>$$i = \frac{n_1}{n_2} = \frac{d_2}{d_1}$$</p>
+<p>其中 $d_1$、$d_2$ 分别是主动轮和从动轮的节圆直径。传动比大于 1 表示减速，小于 1 表示增速。</p>
+<p><strong>实用要点</strong>：单级三角带传动的合理传动比范围是 <strong>1.0～3.5</strong>，最大不超过 5。过大传动比会导致小带轮包角过小，带与轮槽接触面积不足，容易打滑。</p>
+<h3 id="1-2-如何确定传动比">1.2 如何确定传动比</h3>
+<p>传动比由设备需求决定：</p>
+<div class="table-scroll"><table class="data-table">
+<thead>
+<tr>
+<th>场景</th>
+<th>典型传动比</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>风机、水泵直连电机</td>
+<td>1.0～1.1</td>
+<td>转速相近，可选同步轮或直接联轴器</td>
+</tr>
+<tr>
+<td>普通机床主轴</td>
+<td>2.0～3.0</td>
+<td>电机高速转，主轴中速转</td>
+</tr>
+<tr>
+<td>破碎机、搅拌机</td>
+<td>3.0～5.0</td>
+<td>大扭矩低转速场合</td>
+</tr>
+<tr>
+<td>压缩机</td>
+<td>2.5～4.0</td>
+<td>根据压缩机铭牌转速反推</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>设计口诀</strong>：先定设备转速需求，再反推传动比；传动比确定了，下一步就是选带轮直径。</p>
+<h2 id="二-带轮包角-小带轮包角决定传动能力上限">二、带轮包角：小带轮包角决定传动能力上限</h2>
+<h3 id="2-1-包角的定义与重要性">2.1 包角的定义与重要性</h3>
+<p>包角 $\alpha$ 是带与带轮接触弧所对的圆心角。<strong>小带轮包角 $\alpha_1$ 永远小于大带轮包角 $\alpha_2$</strong>，而打滑总是从小带轮开始发生，所以包角校核只看小带轮。</p>
+<p>国家标准规定：<strong>小带轮包角不应小于 120°</strong>， minimum 不允许低于 90°。包角过小，带与轮槽的摩擦接触面积不足，传动能力断崖式下降。</p>
+<h3 id="2-2-包角计算公式">2.2 包角计算公式</h3>
+<p>当已知中心距 $a$ 和大、小带轮直径 $D$、$d$ 时：</p>
+<p>$$\alpha_1 \approx 180° - \frac{D - d}{a} \times 57.3°$$</p>
+<p><strong>经验公式记忆法</strong>：中心距越小、两轮直径差越大，小带轮包角越小。这也是为什么大功率传动往往需要较大的中心距。</p>
+<h3 id="2-3-包角不足怎么办">2.3 包角不足怎么办</h3>
+<p>发现 $\alpha_1 &lt; 120°$ 时，有以下三种调整方法：</p>
+<div class="table-scroll"><table class="data-table">
+<thead>
+<tr>
+<th>方法</th>
+<th>适用场景</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>增大中心距</strong></td>
+<td>结构设计允许</td>
+<td>最有效，包角线性增加</td>
+</tr>
+<tr>
+<td><strong>加装张紧轮</strong></td>
+<td>中心距不可调</td>
+<td>张紧轮放在松边内侧，可显著增大包角</td>
+</tr>
+<tr>
+<td><strong>改用窄 V 带（SPZ/SPA）</strong></td>
+<td>空间受限</td>
+<td>同等包角下传动能力比普通 V 带高 40%～60%</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="三-中心距-影响包角-带长与结构布局">三、中心距：影响包角、带长与结构布局</h2>
+<h3 id="3-1-中心距的选择原则">3.1 中心距的选择原则</h3>
+<p>中心距 $a$ 不是随意定的，需要同时满足三个条件：</p>
+<ol>
+<li><strong>包角条件</strong>：$\alpha_1 \geq 120°$</li>
+<li><strong>带长条件</strong>：选的标准带长能匹配该中心距</li>
+<li><strong>结构条件</strong>：留有调整余量，方便张紧和更换</li>
+</ol>
+<p>一般推荐中心距范围：</p>
+<p>$$0.7(D + d) \leq a \leq 2(D + d)$$</p>
+<h3 id="3-2-中心距计算公式-已知带长反求">3.2 中心距计算公式（已知带长反求）</h3>
+<p>若已选定标准带长 $L$，可用下式估算中心距：</p>
+<p>$$a \approx \frac{L}{4} - \frac{\pi(D + d)}{8} + \sqrt{\left[\frac{L}{4} - \frac{\pi(D + d)}{8}\right]^2 - \frac{(D - d)^2}{8}}$$</p>
+<p>实际工程中多查表或试算，因为带长是标准值，需要迭代找到合适的中心距。</p>
+<h2 id="四-传递功率与带根数-设计的最终目标">四、传递功率与带根数：设计的最终目标</h2>
+<h3 id="4-1-单根-v-带的额定功率">4.1 单根 V 带的额定功率</h3>
+<p>单根带的额定功率 $P_0$ 由以下因素决定：</p>
+<ul>
+<li><strong>带型</strong>：SPZ &lt; SPA &lt; SPB &lt; SPC（窄 V 带依次增大）</li>
+<li><strong>小带轮直径</strong>：直径越大，弯曲应力越小，功率能力越高</li>
+<li><strong>小带轮转速</strong>：转速适中时功率最大，过高则离心力影响显著</li>
+</ul>
+<p>查《V 带额定功率表》可得不同带型、不同轮径、不同转速下的 $P_0$ 值。这是设计的核心数据源。</p>
+<h3 id="4-2-功率修正公式">4.2 功率修正公式</h3>
+<p>实际设计中需对 $P_0$ 进行修正：</p>
+<p>$$P_c = \frac{P}{K_\alpha \cdot K_L \cdot K_z}$$</p>
+<p>其中：
+- $P$：需要传递的计算功率（kW）
+- $P_c$：修正后的单根带额定功率
+- $K_\alpha$：包角修正系数（$\alpha_1 &lt; 180°$ 时 $K_\alpha &lt; 1$）
+- $K_L$：带长修正系数（非基准带长时调整）
+- $K_z$：多根带并列系数（一般取 1.0，根数多时可略降）</p>
+<h3 id="4-3-带根数计算">4.3 带根数计算</h3>
+<p>所需带根数 $z$：</p>
+<p>$$z = \frac{P_c}{P_0}$$</p>
+<p>结果<strong>向上取整</strong>，且一般不建议单根带传大功率——超过 4 根时建议改用多楔带或同步带，结构更紧凑。</p>
+<h3 id="4-4-功率计算实例">4.4 功率计算实例</h3>
+<p><strong>已知条件</strong>：
+- 电机功率 $P = 7.5$ kW，转速 $n_1 = 1450$ r/min
+- 从动轮转速 $n_2 = 720$ r/min
+- 小带轮直径 $d = 100$ mm，大带轮直径 $D = 200$ mm
+- 中心距初选 $a = 400$ mm</p>
+<p><strong>步骤 1：计算传动比</strong>
+$$i = \frac{1450}{720} \approx 2.01$$</p>
+<p><strong>步骤 2：验算包角</strong>
+$$\alpha_1 \approx 180° - \frac{200 - 100}{400} \times 57.3° = 180° - 14.3° = 165.7°$$
+满足 $\alpha_1 \geq 120°$，合格。</p>
+<p><strong>步骤 3：查表选带型</strong>
+查额定功率表，SPA 型带在 $d = 100$ mm、$n_1 = 1450$ r/min 时 $P_0 \approx 2.8$ kW。</p>
+<p><strong>步骤 4：计算修正功率</strong>
+查修正系数表得 $K_\alpha \approx 0.96$（$\alpha_1 = 165.7°$），$K_L \approx 1.0$（标准带长）。
+$$P_c = \frac{7.5}{0.96 \times 1.0} \approx 7.81 \text{ kW}$$</p>
+<p><strong>步骤 5：确定带根数</strong>
+$$z = \frac{7.81}{2.8} \approx 2.79 \rightarrow \text{取 } z = 3 \text{ 根}$$</p>
+<p><strong>结论</strong>：选用 3 根 SPA 型三角带，基准带长查表确定（通常对应中心距 400 mm 的标准带长）。</p>
+<h2 id="五-完整设计流程总结">五、完整设计流程总结</h2>
+<pre><code>设备需求 → 确定传动比 → 选带型 → 定带轮直径 → 初选中心距
+    ↓
+验算包角（&lt;120°需调整）→ 查额定功率表 → 修正功率 → 计算带根数
+    ↓
+选标准带长 → 复核中心距 → 输出设计参数
+</code></pre>
+<p><strong>三条黄金法则</strong>：
+1. 传动比优先控制在 3 以内，超过 3 考虑多级传动
+2. 小带轮包角永远不小于 120°，这是安全底线
+3. 带根数超过 4 根时，认真评估是否改用多楔带</p>
+<h2 id="六-常见问题">六、常见问题</h2>
+<p><strong>Q：传动比 5 以上能直接用三角带吗？</strong>
+A：不推荐。单级传动比超过 5 时小带轮包角通常不足 90°，极易打滑。应分两级传动，或改用蜗轮蜗杆、齿轮传动。</p>
+<p><strong>Q：窄 V 带（SPZ/SPA/SPB/SPC）和普通 V 带（A/B/C）能混用吗？</strong>
+A：不能。两种带的截面尺寸和轮槽规格不同，带轮不通用，混用会导致接触不良和早期失效。</p>
+<p><strong>Q：中心距可以随意调整吗？</strong>
+A：可以，但需要考虑带长匹配。实际设备安装时通常预留调整机构（如滑轨或摆锤），方便新带张紧和旧带伸长后的补偿。</p>
+<hr>
+<p><em>本文涵盖三角带传动设计的核心计算：传动比确定、包角验算、中心距选择、功率修正与带根数计算。掌握这四步，可独立完成大多数工业传动的三角带选型设计。</em></p>
+    </div>
+
+    <div class="tag-row">
+      <a class="tag" href="/search/?q=%E4%BC%A0%E5%8A%A8%E6%AF%94%E8%AE%A1%E7%AE%97">传动比计算</a>
+      <a class="tag" href="/search/?q=%E5%B8%A6%E8%BD%AE%E5%8C%85%E8%A7%92">带轮包角</a>
+      <a class="tag" href="/search/?q=%E4%B8%89%E8%A7%92%E5%B8%A6%E4%B8%AD%E5%BF%83%E8%B7%9D">三角带中心距</a>
+      <a class="tag" href="/search/?q=%E4%B8%89%E8%A7%92%E5%B8%A6%E5%8A%9F%E7%8E%87">三角带功率</a>
+      <a class="tag" href="/search/?q=%E4%B8%89%E8%A7%92%E5%B8%A6%E6%A0%B9%E6%95%B0">三角带根数</a>
+      <a class="tag" href="/search/?q=V%E5%B8%A6%E4%BC%A0%E5%8A%A8%E8%AE%BE%E8%AE%A1">V带传动设计</a>
+      <a class="tag" href="/search/?q=%E7%AA%84V%E5%B8%A6%E9%80%89%E5%9E%8B">窄V带选型</a>
+      <a class="tag" href="/search/?q=SPZ%20SPA%20SPB%20SPC">SPZ SPA SPB SPC</a>
+    </div>
+
+    <section class="related">
+<h2>相关阅读</h2>
+<div class="card-grid">
+<article class="card">
+  <div class="card-top">
+    <a class="card-cat" href="/category/guide/">选型与安装维护</a>
+    <span class="card-date">2026-10-12</span>
+  </div>
+  <h3><a href="/guide/duoxidai-yu-sanjiaodai-xuanxing-duibi/">多楔带与三角带选型对比：传动能力、散热与适用场景</a></h3>
+  <p>多楔带（Poly V 带）和普通三角带（V带）都有楔形截面，传动原理相似，但结构不同导致性能差异明显。本文从截面形状、传动能力、散热、成本与适用场景五个维度做系统对比，帮你在选型时快速做出判断。</p>
+  <div class="card-foot">
+    <span class="card-kw">多楔带</span>
+    <a class="card-more" href="/guide/duoxidai-yu-sanjiaodai-xuanxing-duibi/">阅读全文 →</a>
+  </div>
+</article>
+<article class="card">
+  <div class="card-top">
+    <a class="card-cat" href="/category/guide/">选型与安装维护</a>
+    <span class="card-date">2026-10-11</span>
+  </div>
+  <h3><a href="/guide/sanjiaodai-guige-zhuchaxun/">三角带规格速查与常见故障判断：截面尺寸、打滑与异响</a></h3>
+  <p>三角带截面尺寸的三个测量参数怎么读？打滑和异响各有哪些快速判别信号？本文用一张截面尺寸速查表 + 故障判定清单，帮采购与维护人员现场快速定位问题。</p>
+  <div class="card-foot">
+    <span class="card-kw">三角带规格表</span>
+    <a class="card-more" href="/guide/sanjiaodai-guige-zhuchaxun/">阅读全文 →</a>
+  </div>
+</article>
+<article class="card">
+  <div class="card-top">
+    <a class="card-cat" href="/category/guide/">选型与安装维护</a>
+    <span class="card-date">2026-10-11</span>
+  </div>
+  <h3><a href="/guide/sanjiaodai-chuandongbi-jisuan/">三角带传动比与中心距计算：功率、根数与安装空间</a></h3>
+  <p>三角带传动如何根据传递功率和传动比确定根数？中心距怎么算、包角够不够、安装空间有没有余量？本文给出完整的计算流程与现场可用经验公式。</p>
+  <div class="card-foot">
+    <span class="card-kw">传动比计算</span>
+    <a class="card-more" href="/guide/sanjiaodai-chuandongbi-jisuan/">阅读全文 →</a>
+  </div>
+</article>
+</div>
+</section>
+  </article>
+
+  <aside class="side">
+    <div class="side-box"><h3>本文目录</h3><nav class="toc"><a class="" href="#一-传动比-决定主动轮与从动轮的直径关系">一、传动比：决定主动轮与从动轮的直径关系</a>
+<a class="lv3" href="#1-1-什么是传动比">1.1 什么是传动比</a>
+<a class="lv3" href="#1-2-如何确定传动比">1.2 如何确定传动比</a>
+<a class="" href="#二-带轮包角-小带轮包角决定传动能力上限">二、带轮包角：小带轮包角决定传动能力上限</a>
+<a class="lv3" href="#2-1-包角的定义与重要性">2.1 包角的定义与重要性</a>
+<a class="lv3" href="#2-2-包角计算公式">2.2 包角计算公式</a>
+<a class="lv3" href="#2-3-包角不足怎么办">2.3 包角不足怎么办</a>
+<a class="" href="#三-中心距-影响包角-带长与结构布局">三、中心距：影响包角、带长与结构布局</a>
+<a class="lv3" href="#3-1-中心距的选择原则">3.1 中心距的选择原则</a>
+<a class="lv3" href="#3-2-中心距计算公式-已知带长反求">3.2 中心距计算公式（已知带长反求）</a>
+<a class="" href="#四-传递功率与带根数-设计的最终目标">四、传递功率与带根数：设计的最终目标</a>
+<a class="lv3" href="#4-1-单根-v-带的额定功率">4.1 单根 V 带的额定功率</a>
+<a class="lv3" href="#4-2-功率修正公式">4.2 功率修正公式</a>
+<a class="lv3" href="#4-3-带根数计算">4.3 带根数计算</a>
+<a class="lv3" href="#4-4-功率计算实例">4.4 功率计算实例</a>
+<a class="" href="#五-完整设计流程总结">五、完整设计流程总结</a>
+<a class="" href="#六-常见问题">六、常见问题</a></nav></div>
+    <div class="side-box">
+      <h3>同栏目文章</h3>
+      <div class="side-links">
+        <div class="side-box"><h3>同栏目文章</h3><div class="side-links"><a href="/guide/duoxidai-yu-sanjiaodai-xuanxing-duibi/">多楔带与三角带选型对比：传动能力、散热与适用场景</a>
+        <a href="/guide/sanjiaodai-guige-zhuchaxun/">三角带规格速查与常见故障判断：截面尺寸、打滑与异响</a>
+        <a href="/guide/sanjiaodai-chuandongbi-jisuan/">三角带传动比与中心距计算：功率、根数与安装空间</a>
+        <a href="/guide/sanjiaodai-zayin-paicha/">三角带噪音大怎么回事？5种异响来源与排查方法</a>
+        <a href="/guide/sanjiaodai-xinghao-guige-canshu/">三角带型号规格参数详解：截面尺寸、长度基准与标注方法</a>
+        <a href="/guide/sanjiaodai-dahua-paicha/">三角带打滑怎么解决？5 大原因排查与张紧调整方法</a></div></div>
+      </div>
+    </div>
+    <div class="side-box">
+      <h3>常用速查</h3>
+      <div class="side-links">
+        <a href="/specs/#normal-v">普通V带截面尺寸</a>
+        <a href="/specs/#narrow-v">窄V带 SPZ/SPA/SPB/SPC</a>
+        <a href="/specs/#length-basis">长度基准 Li/Lw/Ld/La</a>
+        <a href="/specs/#min-pulley">小带轮最小直径</a>
+        <a href="/specs/#troubleshoot">失效现象速查</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">三角带行业资讯</div>
+      <p class="footer-desc">三角带（V带）行业资讯站，提供三角带结构材质讲解、A/B/C/SPZ/SPA/SPB/SPC 型号规格速查表、选型计算与安装维护指南、行业动态与常见问题解答，面向机械传动采购与技术人员。</p>
+      <p class="footer-domain">中文域名：三角带.com<br>Punycode：<code>xn--ehqs60bj46a.com</code></p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">快速入口</div>
+      <ul class="footer-links">
+        <li><a href="/category/basics/">三角带基础知识</a></li>
+        <li><a href="/category/models/">型号规格速查</a></li>
+        <li><a href="/category/guide/">选型与安装维护</a></li>
+        <li><a href="/category/news/">行业动态</a></li>
+        <li><a href="/category/faq/">常见问题</a></li>
+        <li><a href="/sitemap/">全站地图</a></li>
+        <li><a href="/about/">关于本站</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <div class="footer-title">关于本站</div>
+      <p class="footer-desc">本站为行业知识分享站点，内容仅供参考，实际选型请以主机厂技术文件和现行标准为准。</p>
+      <p class="footer-meta">本站内容经持续整理更新，如发现技术性错误欢迎指出。</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> 三角带行业资讯 · 三角带.com</span>
+    <a href="/sitemap/">网站地图</a>
+  </div>
+</footer>
+
+<script src="/assets/main.js" defer></script>
+</body>
+</html>
