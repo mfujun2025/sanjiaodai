@@ -1,6 +1,6 @@
 ---
 title: 三角带传动比与带轮包角计算：中心距、功率与根数确定方法
-slug: chuan Dong-bi-yu-dai-lun-bao-jiao-ji-suan
+slug: chuan-dong-bi-yu-dai-lun-bao-jiao-ji-suan
 category: guide
 date: 2026-10-13
 desc: 三角带传动设计中，传动比、带轮包角、中心距、传递功率与带根数是核心参数。本文系统讲解计算公式、查表方法与实际工程应用，帮助你完成完整的三角带传动设计。
