@@ -54,6 +54,8 @@ SRC_EXCLUDE_FILES = {"verify-out.json", "verify-err.txt", "http.log", "chrome.lo
 SRC_EXCLUDE_PREFIX = ("_",)
 # 仅位于项目根目录的这些文件排除（不误伤 static/ 下的正常资源）
 SRC_ROOT_EXCLUDE_EXT = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
+# 项目根目录的 JSON 白名单：只有站点配置入库，其余（SEO 报告等本地工作数据）一律排除
+SRC_ROOT_JSON_WHITELIST = {"site.json", "categories.json", "specs.json"}
 
 
 # ---------------------------------------------------------------- 凭据
@@ -120,6 +122,9 @@ def collect_src():
             rel = os.path.relpath(full, ROOT).replace("\\", "/")
             # 项目根目录下的位图（截图/调试产物）不入库；static/ 内的正常资源不受影响
             if "/" not in rel and os.path.splitext(fn)[1].lower() in SRC_ROOT_EXCLUDE_EXT:
+                continue
+            # 项目根目录的 JSON：仅站点配置白名单入库，其余视为本地工作数据
+            if "/" not in rel and fn.endswith(".json") and fn not in SRC_ROOT_JSON_WHITELIST:
                 continue
             # 隐藏文件：只放行 .gitignore / .nojekyll，其余跳过
             if os.path.basename(rel).startswith(".") and os.path.basename(rel) not in (".gitignore", ".nojekyll"):
